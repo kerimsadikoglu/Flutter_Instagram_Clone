@@ -1,25 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_story_player/models/story_model.dart';
-import 'package:instagram_story_player/view/pages/StoryViewer.dart';
-import 'package:instagram_story_player/view/widgets/story_circle.dart';
+import 'package:instagram_story_player/view/pages/story_page_git.dart';
 
+import 'package:instagram_story_player/view/pages/story_screen.dart';
+import 'package:instagram_story_player/view/widgets/story_circle.dart';
 
 class StoryWidget extends StatelessWidget {
   final StoryModel story;
+  final int currentIndex; // Add this line
 
-  StoryWidget({required this.story});
+  StoryWidget({
+    required this.story,
+    required this.currentIndex, // Add this line
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator kullanarak StoryViewer sayfasına yönlendirme yap
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => StoryViewer(story: story),
+            builder: (context) => StoryPageGit(),
           ),
         );
       },
+
       child: Column(
         children: [
           StoryCircle(

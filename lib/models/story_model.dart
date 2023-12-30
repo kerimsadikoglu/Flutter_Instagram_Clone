@@ -16,12 +16,14 @@ class StoryModel {
   final String userName;
   final String profileImageUrl;
   final bool hasStory;
+  final int storyNumber;
   final List<StoryItem> storyItems;
 
   StoryModel({
     required this.userName,
     required this.profileImageUrl,
     this.hasStory = false,
+    required this.storyNumber,
     required this.storyItems,
   });
 }

@@ -18,7 +18,7 @@ class StoriesList extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(11),
-            child: StoryWidget(story: stories[index]),
+            child: StoryWidget(story: stories[index], currentIndex: index,),
           );
         },
       ),
