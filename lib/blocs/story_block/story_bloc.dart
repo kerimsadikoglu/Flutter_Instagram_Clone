@@ -86,6 +86,7 @@ class StoryBloc extends Bloc<StoryEvent, StoryState> {
             storyItems: []),
         // Diğer hikaye modelleri...
       ];
+
       emit(StoryLoadedState(stories: stories));
     });
   }

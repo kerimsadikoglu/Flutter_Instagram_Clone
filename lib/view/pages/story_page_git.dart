@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_story_player/models/story_user.dart';
+import 'package:instagram_story_player/view/widgets/video_widget.dart';
 
 import 'package:story/story_page_view.dart';
 
 class StoryPageGit extends StatelessWidget {
-  const StoryPageGit({super.key});
+
+  final int currentIndex;
+
+
+  StoryPageGit(this.currentIndex);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: StoryPageView(
+        initialPage: currentIndex,
         itemBuilder: (context, pageIndex, storyIndex) {
+          //pageIndex += currentIndex;
           final user = users[pageIndex];
           final story = user.stories[storyIndex];
           return Stack(
@@ -19,10 +26,12 @@ class StoryPageGit extends StatelessWidget {
                 child: Container(color: Colors.black),
               ),
               Positioned.fill(
-                child: Image.network(
+                child: story.mediatpy == MediaType.image
+                    ? Image.network(
                   story.imageUrl,
                   fit: BoxFit.cover,
-                ),
+                )
+                    : VideoWidget(videoUrl: story.imageUrl,duration:story.duration ,),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 44, left: 8),
@@ -46,6 +55,7 @@ class StoryPageGit extends StatelessWidget {
             ],
           );
         },
+        indicatorDuration: const Duration(seconds: 10),
         gestureItemBuilder: (context, pageIndex, storyIndex) {
           return Align(
             alignment: Alignment.topRight,
@@ -62,19 +72,26 @@ class StoryPageGit extends StatelessWidget {
             ),
           );
         },
+
+
+
         initialStoryIndex: (pageIndex) {
           if (pageIndex == 0) {
             return 0;
           }
           return 0;
         },
-        pageLength: users.length,
-        storyLength: (int pageIndex) {
+        pageLength: (users.length),
+
+        storyLength: (int pageIndex ) {
+          //pageIndex += currentIndex;
           return users[pageIndex].stories.length;
         },
+
         onPageLimitReached: () {
           Navigator.pop(context);
         },
+
       ),
     );
   }

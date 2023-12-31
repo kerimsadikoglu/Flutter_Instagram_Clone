@@ -1,3 +1,5 @@
+/*
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:instagram_story_player/models/story_model.dart';
@@ -109,4 +111,4 @@ class _StoryViewerState extends State<StoryViewer> {
       ),
     );
   }
-}
+}*/

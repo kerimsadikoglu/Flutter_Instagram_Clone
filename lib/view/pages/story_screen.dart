@@ -1,3 +1,5 @@
+/*
+
 import 'package:flutter/material.dart';
 import 'package:instagram_story_player/models/story_model.dart';
 import 'package:instagram_story_player/view/widgets/video_widget.dart';
@@ -25,7 +27,7 @@ class StoryPageVis extends StatelessWidget {
                   storyItem.url,
                   fit: BoxFit.cover,
                 )
-                    : VideoWidget(videoUrl: storyItem.url),
+                    : VideoWidget(videoUrl: storyItem.url,duration: 10,),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 44, left: 8),
@@ -79,4 +81,4 @@ class StoryPageVis extends StatelessWidget {
       ),
     );
   }
-}
+}*/

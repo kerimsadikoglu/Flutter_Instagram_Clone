@@ -3,8 +3,9 @@ import 'package:video_player/video_player.dart';
 
 class VideoWidget extends StatelessWidget {
   final String videoUrl;
+  final int duration;
 
-  VideoWidget({required this.videoUrl});
+  VideoWidget({required this.videoUrl,required this.duration});
 
   @override
   Widget build(BuildContext context) {

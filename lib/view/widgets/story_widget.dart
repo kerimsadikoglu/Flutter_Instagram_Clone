@@ -20,7 +20,7 @@ class StoryWidget extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => StoryPageGit(),
+            builder: (context) => StoryPageGit(currentIndex),
           ),
         );
       },

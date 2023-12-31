@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_story_player/models/story_model.dart';
+
 import 'package:instagram_story_player/view/widgets/story_widget.dart';
 
 class StoriesList extends StatelessWidget {

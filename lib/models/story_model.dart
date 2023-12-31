@@ -1,3 +1,5 @@
+
+
 enum MediaType { image, video }
 
 class StoryItem {
@@ -18,6 +20,7 @@ class StoryModel {
   final bool hasStory;
   final int storyNumber;
   final List<StoryItem> storyItems;
+
 
   StoryModel({
     required this.userName,
