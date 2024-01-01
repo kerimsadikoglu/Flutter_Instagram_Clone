@@ -19,7 +19,11 @@ class StoryCircle extends StatelessWidget {
           begin: Alignment.bottomLeft,
           end: Alignment.topRight,
         )
-            : null,
+            : LinearGradient(
+          colors: [Colors.grey, Colors.grey],
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+        ),
       ),
       child: Padding(
         padding: const EdgeInsets.all(4), // Halkanın kalınlığı

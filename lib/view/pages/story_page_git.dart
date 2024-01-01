@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:instagram_story_player/models/story_user.dart';
 import 'package:instagram_story_player/view/widgets/video_widget.dart';
 
+
 import 'package:story/story_page_view.dart';
 
 class StoryPageGit extends StatelessWidget {
 
   final int currentIndex;
-
 
   StoryPageGit(this.currentIndex);
 
@@ -17,9 +17,8 @@ class StoryPageGit extends StatelessWidget {
       body: StoryPageView(
         initialPage: currentIndex,
         itemBuilder: (context, pageIndex, storyIndex) {
-          //pageIndex += currentIndex;
-          final user = users[pageIndex];
-          final story = user.stories[storyIndex];
+          var user = UserModel.users[pageIndex];
+          var story = user.stories[storyIndex];
           return Stack(
             children: [
               Positioned.fill(
@@ -81,11 +80,11 @@ class StoryPageGit extends StatelessWidget {
           }
           return 0;
         },
-        pageLength: (users.length),
+        pageLength: (UserModel.users.length),
 
         storyLength: (int pageIndex ) {
-          //pageIndex += currentIndex;
-          return users[pageIndex].stories.length;
+
+          return UserModel.users[pageIndex].stories.length;
         },
 
         onPageLimitReached: () {

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_story_player/models/story_model.dart';
+import 'package:instagram_story_player/models/story_user.dart';
 import 'package:instagram_story_player/view/pages/story_page_git.dart';
 
 import 'package:instagram_story_player/view/pages/story_screen.dart';
 import 'package:instagram_story_player/view/widgets/story_circle.dart';
 
 class StoryWidget extends StatelessWidget {
-  final StoryModel story;
+  final UserModel story;
   final int currentIndex; // Add this line
 
   StoryWidget({
@@ -28,8 +29,8 @@ class StoryWidget extends StatelessWidget {
       child: Column(
         children: [
           StoryCircle(
-            imageUrl: story.profileImageUrl,
-            hasStory: story.hasStory,
+            imageUrl: story.imageUrl,
+            hasStory: true,
           ),
           SizedBox(height: 6),
           Text(story.userName, style: TextStyle(fontSize: 12)),

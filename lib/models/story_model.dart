@@ -1,5 +1,4 @@
-
-
+/*
 enum MediaType { image, video }
 
 class StoryItem {
@@ -29,4 +28,4 @@ class StoryModel {
     required this.storyNumber,
     required this.storyItems,
   });
-}
+}*/

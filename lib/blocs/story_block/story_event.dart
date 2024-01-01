@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:instagram_story_player/models/story_model.dart';
+import 'package:instagram_story_player/models/story_user.dart';
 
 abstract class StoryEvent {}
 
@@ -17,7 +18,7 @@ abstract class StoryState {}
 class StoryInitial extends StoryState {}
 
 class StoryLoaded extends StoryState {
-  final List<StoryItem> stories;
+  final List<UserModel> stories;
   final int currentIndex;
 
   StoryLoaded({required this.stories, this.currentIndex = 0});
