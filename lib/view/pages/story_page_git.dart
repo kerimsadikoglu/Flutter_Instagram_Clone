@@ -19,6 +19,7 @@ class StoryPage extends StatelessWidget {
         itemBuilder: (context, pageIndex, storyIndex) {
           var user = UserModel.users[pageIndex];
           var story = user.stories[storyIndex];
+          UserModel.users[pageIndex].isWatched=1;
           return Stack(
             children: [
               Positioned.fill(
@@ -30,7 +31,7 @@ class StoryPage extends StatelessWidget {
                   story.imageUrl,
                   fit: BoxFit.cover,
                 )
-                    : VideoWidget(videoUrl: story.imageUrl,duration:story.duration ,),
+                    : VideoWidget(videoUrl: story.imageUrl,duration:story.date ,),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 44, left: 8),
@@ -46,6 +47,15 @@ class StoryPage extends StatelessWidget {
                         fontSize: 17,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Text(
+                      '${story.date}s',
+                      style: const TextStyle(
+                        fontSize: 17,
+                        color: Colors.grey,
+
                       ),
                     ),
                   ],

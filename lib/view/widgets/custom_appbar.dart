@@ -7,13 +7,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0, // AppBar altındaki gölgeyi kaldırır
-      title: Text(
-        '𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶',
-        style: TextStyle(
-          color: Colors.black, // Logonun rengi
-          fontFamily: 'Billabong', // Instagram logonun tipik fontu
-          fontSize: 35.0, // Logonun boyutu
-        ),
+      title: Image.network(
+        'https://freelogopng.com/images/all_img/1658587465instagram-name-logo.png',
+        height: 35.0, // Resmin boyutunu ayarlayabilirsiniz
       ),
       actions: <Widget>[
         IconButton(

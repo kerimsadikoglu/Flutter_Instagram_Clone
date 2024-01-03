@@ -33,7 +33,7 @@ class MainPage extends StatelessWidget {
                 }
               },
             ),
-            Divider(height: 1, color: Colors.grey),
+            Divider(height: 1, color: Colors.grey[300]),
             Expanded(
               child: BlocBuilder<PostBloc, PostState>(
                 builder: (context, postState) {

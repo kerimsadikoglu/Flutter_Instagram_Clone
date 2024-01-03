@@ -35,14 +35,9 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
     super.initState();
     _controller = VideoPlayerController.network(widget.videoUrl)
       ..initialize().then((_) {
-        // Video başladığında otomatik olarak oynatmak için:
+
         _controller.play();
-        // 5 saniye sonra videoyu durdurmak için bir Timer başlat
-        _timer = Timer(Duration(seconds: 5), () {
-          _controller.pause(); // Videoyu durdur
-          // Videoyu başlangıç noktasına sarmak istiyorsanız aşağıdaki kodu kullanabilirsiniz.
-          // _controller.seekTo(Duration.zero);
-        });
+
         setState(() {});
       });
   }
@@ -54,7 +49,7 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
 
   @override
   void dispose() {
-    _timer?.cancel(); // Timer'ı temizleyin
+    _timer?.cancel();
     _controller.dispose();
     super.dispose();
   }

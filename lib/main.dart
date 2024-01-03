@@ -1,6 +1,6 @@
 // main.dart dosyası içinde
 import 'package:flutter/material.dart';
-import 'package:instagram_story_player/view/pages/story_page.dart';
+import 'package:instagram_story_player/view/pages/main_page.dart';
 
 
 void main() {

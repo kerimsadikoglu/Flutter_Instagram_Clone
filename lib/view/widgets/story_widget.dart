@@ -27,7 +27,7 @@ class StoryWidget extends StatelessWidget {
         children: [
           StoryCircle(
             imageUrl: story.imageUrl,
-            hasStory: true,
+            isWatched: story.isWatched,
           ),
           SizedBox(height: 6),
           Text(story.userName, style: TextStyle(fontSize: 12)),

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class StoryCircle extends StatelessWidget {
   final String imageUrl;
-  final bool hasStory;
+  final int isWatched;
 
-  StoryCircle({required this.imageUrl, this.hasStory = false});
+  StoryCircle({required this.imageUrl, this.isWatched = 0});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class StoryCircle extends StatelessWidget {
       height: 85,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        gradient: hasStory
+        gradient: isWatched==0
             ? LinearGradient(
           colors: [Colors.yellow, Colors.redAccent],
           begin: Alignment.bottomLeft,
