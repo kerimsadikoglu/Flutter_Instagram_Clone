@@ -8,7 +8,7 @@ import 'package:instagram_story_player/view/widgets/post_widget.dart';
 import 'package:instagram_story_player/view/widgets/story_list.dart';
 import 'package:instagram_story_player/view/widgets/custom_instagram_bottom_bar.dart';
 
-class StoryPage extends StatelessWidget {
+class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -33,7 +33,7 @@ class StoryPage extends StatelessWidget {
                 }
               },
             ),
-            Divider(height: 2, color: Colors.black),
+            Divider(height: 1, color: Colors.grey),
             Expanded(
               child: BlocBuilder<PostBloc, PostState>(
                 builder: (context, postState) {

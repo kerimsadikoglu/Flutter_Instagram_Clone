@@ -5,11 +5,11 @@ import 'package:instagram_story_player/view/widgets/video_widget.dart';
 
 import 'package:story/story_page_view.dart';
 
-class StoryPageGit extends StatelessWidget {
+class StoryPage extends StatelessWidget {
 
   final int currentIndex;
 
-  StoryPageGit(this.currentIndex);
+  StoryPage(this.currentIndex);
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ class StoryPageGit extends StatelessWidget {
             ],
           );
         },
-        indicatorDuration: const Duration(seconds: 10),
+        indicatorDuration: const Duration(seconds: 5),
         gestureItemBuilder: (context, pageIndex, storyIndex) {
           return Align(
             alignment: Alignment.topRight,

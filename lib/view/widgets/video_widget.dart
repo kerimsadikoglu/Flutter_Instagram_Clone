@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -5,7 +6,7 @@ class VideoWidget extends StatelessWidget {
   final String videoUrl;
   final int duration;
 
-  VideoWidget({required this.videoUrl,required this.duration});
+  VideoWidget({required this.videoUrl, required this.duration});
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +28,7 @@ class VideoPlayerWidget extends StatefulWidget {
 
 class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
   late VideoPlayerController _controller;
+  Timer? _timer;
 
   @override
   void initState() {
@@ -34,7 +36,13 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
     _controller = VideoPlayerController.network(widget.videoUrl)
       ..initialize().then((_) {
         // Video başladığında otomatik olarak oynatmak için:
-         _controller.play();
+        _controller.play();
+        // 5 saniye sonra videoyu durdurmak için bir Timer başlat
+        _timer = Timer(Duration(seconds: 5), () {
+          _controller.pause(); // Videoyu durdur
+          // Videoyu başlangıç noktasına sarmak istiyorsanız aşağıdaki kodu kullanabilirsiniz.
+          // _controller.seekTo(Duration.zero);
+        });
         setState(() {});
       });
   }
@@ -46,7 +54,8 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
 
   @override
   void dispose() {
-    super.dispose();
+    _timer?.cancel(); // Timer'ı temizleyin
     _controller.dispose();
+    super.dispose();
   }
 }

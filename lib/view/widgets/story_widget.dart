@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_story_player/models/story_model.dart';
 import 'package:instagram_story_player/models/story_user.dart';
 import 'package:instagram_story_player/view/pages/story_page_git.dart';
-
-import 'package:instagram_story_player/view/pages/story_screen.dart';
 import 'package:instagram_story_player/view/widgets/story_circle.dart';
 
 class StoryWidget extends StatelessWidget {
@@ -21,7 +18,7 @@ class StoryWidget extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => StoryPageGit(currentIndex),
+            builder: (context) => StoryPage(currentIndex),
           ),
         );
       },

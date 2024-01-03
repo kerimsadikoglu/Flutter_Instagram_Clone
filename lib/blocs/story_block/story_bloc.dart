@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:instagram_story_player/models/story_model.dart';
+
 import 'package:instagram_story_player/models/story_user.dart';
 
 // Story events

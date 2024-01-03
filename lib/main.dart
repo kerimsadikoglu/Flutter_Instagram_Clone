@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Instagram Story Player',
-      home: StoryPage(), // Burada StoryPage'i ana sayfa olarak ayarlıyoruz
+      home: MainPage(), // Burada StoryPage'i ana sayfa olarak ayarlıyoruz
     );
   }
 }
