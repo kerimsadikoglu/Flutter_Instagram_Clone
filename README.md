@@ -10,7 +10,7 @@ This Story Viewer App is an immersive story experience allowing users to view an
 - **Interactive Playback**: Stories pause when the user taps and holds the screen, and resume on release.
 - **Navigation**: Users can tap on the left to go back to the previous story or group, and tap on the right to proceed to the next.
 - **Media Content**: Support for various media types, including placeholder images and videos hosted online.
-- **Duration Control**: Images have a fixed display time of 5 seconds, while videos play for their full length.
+- **Duration Control**: Images have a fixed display time of 5 seconds.
 - **Progress Indicators**: Individual progress bars for each story, adapting to the duration of the content.
 - **State Persistence**: Story groups remember the last viewed story, resuming from where the user left off during their last visit.
 - **Bloc Architecture**: Utilizes the Bloc architecture for scalable and maintainable code.
@@ -18,6 +18,6 @@ This Story Viewer App is an immersive story experience allowing users to view an
 
 ## Screenshots
 
-![Story Viewer - Home Screen](url-to-home-screen-screenshot)
-![Story Viewer - Story Playback](url-to-story-playback-screenshot)
-![Story Viewer - Story Navigation](url-to-story-navigation-screenshot)
+![Story Viewer - Home Screen](github_screenshots/MainPage.png)
+![Story Viewer - Story Playback](github_screenshots/StoryPage.png)
+![Story Viewer - Story Playback](github_screenshots/StoryPage1.png)
